@@ -9,9 +9,11 @@ docker-compose up --build
 ## Endpoints
 
 ```bash
+GET /
+GET /books
+GET /api/books
 GET /requests
 GET /healthz
-GET /api/books
 
 --
 

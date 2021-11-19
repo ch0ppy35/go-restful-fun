@@ -22,3 +22,10 @@ func getBooks(c *gin.Context) {
 	c.Header("Content-Type", "application/json")
 	c.IndentedJSON(http.StatusOK, Books)
 }
+
+func booksHandler(c *gin.Context) {
+	c.Header("Content-Type", "text/html")
+	c.HTML(http.StatusOK, "books.tmpl", gin.H{
+		"books": Books,
+	})
+}
