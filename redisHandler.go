@@ -12,8 +12,8 @@ type Hitcount struct {
 	Count int64 `json:"count"`
 }
 
-var redisAddress = getEnv("REDIS_HOST", "127.0.0.1")
-var ctx = context.Background()
+var redisAddress string = getEnv("REDIS_HOST", "127.0.0.1")
+var ctx context.Context = context.Background()
 
 func requestsCounter(c *gin.Context) {
 	rdb := redis.NewClient(&redis.Options{
