@@ -2,9 +2,14 @@
 <head>
 <style>
 table {
-  font-family: arial, sans-serif;
+  font-family: Verdana, sans-serif;
   border-collapse: collapse;
   width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-family: Verdana, sans-serif;
 }
 
 td, th {
@@ -20,16 +25,18 @@ tr:nth-child(even) {
 </head>
 <body>
     <div>
-        <h3>Books</h3>
+        <h2>Books</h2>
         <table>
         <tr>
             <th>Title</th>
             <th>Author</th>
+            <th>ISBN</th>
         </tr>
         {{ range .books }}
         <tr>
             <td>{{ .Title }}</td>
             <td>{{ .Author }}</td>
+            <td>{{ .ISBN }}</td>
         </tr>
         {{ end }}
         </table>

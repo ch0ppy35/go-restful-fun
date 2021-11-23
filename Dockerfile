@@ -9,6 +9,6 @@ RUN go build -o ./go-resftul
 
 FROM alpine:3.14 as package
 WORKDIR /app
-COPY templates/ ./templates/
 COPY --from=builder /build/go-resftul .
+COPY templates/ ./templates/
 ENTRYPOINT [ "./go-resftul" ]
